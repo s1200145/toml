@@ -28,6 +28,10 @@ repo = 'scrooloose/syntastic'
 
 [[plugins]]
 repo = 'tyru/caw.vim'
+hook_add ='''
+nmap <Leader>c <Plug>(caw:hatpos:toggle)
+vmap <Leader>c <Plug>(caw:hatpos:toggle)
+'''
 
 [[plugins]]
 repo = 'Shougo/vimshell.vim'
@@ -43,6 +47,23 @@ repo = 'Lokaltog/vim-easymotion'
 
 [[plugins]]
 repo = 'cespare/vim-toml'
+hook_dd ='''
+let g:EasyMotion_do_mapping = 0
+nmap s   <Plug>(easymotion-s2)
+xmap s   <Plug>(easymotion-s2)
+omap z   <Plug>(easymotion-s2)
+nmap g/  <Plug>(easymotion-sn)
+xmap g/  <Plug>(easymotion-sn)
+omap g/  <Plug>(easymotion-tn)
+let g:EasyMotion_smartcase = 1
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-j)
+let g:Easyotion_keys = 'QZASDFGHJKL;'
+let g:EasyMotion_use_upper = 1
+let g:EasyMotion_enter_jump_first = 1
+let g:EasyMotion_space_jump_first = 1
+hi EasyMotionTarget guifg=#ffff00 ctermfg=81
+'''
 
 [[plugins]]
 repo = 'Shougo/vimfiler.vim'
@@ -59,7 +80,7 @@ let g:deoplete#enable_ignore_case = 0
 let g:deoplete#enable_refresh_always = 0
 let g:deoplete#enable_smart_case = 1
 let g:deoplete#file#enable_buffer_path = 1
-let g:deoplete#max_list = 50
+let g:deoplete#max_list = 10000
 inoremap <expr><tab> pumvisible() ? "\<C-n>" :
    \ neosnippet#expandable_or_jumpable() ?
    \    "\<Plug>(neosnippet_expand_or_jump)" : "\<tab>"
