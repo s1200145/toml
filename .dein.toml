@@ -3,7 +3,6 @@ repo = 'Shougo/dein.vim'
 
 [[plugins]]
 repo = 'Shougo/vimproc.vim'
-build = 'make'
 
 [[plugins]]
 repo = 'nathanaelkane/vim-indent-guides'
@@ -80,16 +79,16 @@ repo = 'Shougo/vimfiler.vim'
 repo = 'Shougo/deoplete.nvim'
 on_event = 'InsertCharPre'
 hook_add ='''
-let g:python3_host_prog = '/usr/bin/python3'
+let g:python3_host_prog = 'C:\Users\taku\AppData\Local\Programs\Python\Python37\python.exe'
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#auto_complete_delay = 0
-let g:deoplete#auto_complete_start_length = 2
+let g:deoplete#auto_complete_start_length = 3
 let g:deoplete#enable_camel_case = 0
 let g:deoplete#enable_ignore_case = 0
 let g:deoplete#enable_refresh_always = 0
 let g:deoplete#enable_smart_case = 1
 let g:deoplete#file#enable_buffer_path = 1
-let g:deoplete#max_list = 100
+let g:deoplete#max_list = 10
 imap <expr><TAB> pumvisible() ? "\<C-N>" : neosnippet#jumpable() ?  "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 smap <expr><TAB> neosnippet#jumpable() ?  "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 inoremap <expr><S-TAB>  pumvisible() ? "\<C-p>" : "\<S-TAB>"

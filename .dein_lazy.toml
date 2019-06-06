@@ -114,3 +114,9 @@ autocmd! BufEnter,BufWritePost * Neomake
 let g:neomake_python_enabled_makers = ['python', 'flake8', 'mypy']
 '''
 
+[[plugins]]
+repo = 'tweekmonster/braceless.vim'
+on_ft =  ['python']
+hook_add ='''
+autocmd FileType python BracelessEnable +fold
+'''
