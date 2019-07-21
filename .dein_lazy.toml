@@ -136,3 +136,7 @@ autocmd FileType python BracelessEnable +fold
 [[plugins]]
 repo = 'cespare/vim-toml'
 on_ft = ['toml']
+
+[[plugins]]
+repo = 'cohama/lexima.vim'
+on_i = 1
