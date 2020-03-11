@@ -3,7 +3,9 @@ repo = 'Shougo/dein.vim'
 
 [[plugins]]
 repo = 'Shougo/vimproc.vim'
-
+hook_add='''
+let g:vimproc#download_windows_dll = 1
+'''
 [[plugins]]
 repo = 'nathanaelkane/vim-indent-guides'
 hook_add='''
@@ -304,3 +306,8 @@ let g:context_filetype#filetypes['toml'] = [
 \ {'filetype':'vim', 'start':'^\s*hook_\(add\|source\|post_source\)\s*=\s*'.'""'.'"', 'end':'""'.'"'},
 \ ]
 '''
+[[plugins]]
+repo = 'pepo-le/win-ime-con.nvim'
+
+[[plugins]]
+repo = 'simeji/winresizer'
